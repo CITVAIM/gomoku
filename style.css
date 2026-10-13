@@ -1,0 +1,129 @@
+:root {
+  --board: #e9c88a;
+  --board-edge: #c79a55;
+  --line: #6b4b1f;
+  --bg: #14100b;
+  --panel: #211a12;
+  --text: #f1e6d2;
+  --muted: #b09a78;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: radial-gradient(800px 500px at 50% -10%, #2a2114, transparent), var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.modes {
+  display: flex;
+  background: var(--panel);
+  border: 1px solid #362a1c;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.seg {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.seg.active {
+  background: #3b2d1c;
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #362a1c;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background: #2b2116;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px 4px 0;
+}
+
+.turn {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #111;
+  border: 2px solid #444;
+  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.25);
+}
+
+.turn.white {
+  background: #f4f1ea;
+  border-color: #bbb;
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+#canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
